@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Datalist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module">
+    const button = document.querySelector("#sendAnswer");
+    const favoriteAnimal = document.querySelector("#favoriteAnimal");
+
+    button.addEventListener("click", () => {
+      alert(`Your favorite animal is ${favoriteAnimal.value}`);
+      favoriteAnimal.value = "";
+    });
+  </script>
+</head>
+<body style="padding: 24px;">
+<main>
+  <h1>Datalist example</h1>
+  <article>
+    <p>What is your favorite animal?</p>
+    <label for="favoriteAnimal">Favorite animal:</label><br>
+    <input type="text" id="favoriteAnimal" list="animals"><br><br>
+    <datalist id="animals">
+      <option>Dog</option>
+      <option>Cat</option>
+      <option>Horse</option>
+    </datalist>
+    <button type="button" id="sendAnswer">Send answer</button>
+  </article>
+</main>
+</body>
+</html>
